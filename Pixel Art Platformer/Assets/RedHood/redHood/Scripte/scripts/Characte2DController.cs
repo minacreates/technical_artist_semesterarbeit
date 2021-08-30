@@ -12,6 +12,7 @@ public class Characte2DController : MonoBehaviour
 	private bool isRunning;
 	private bool isGrounded;
 	private bool canJump;
+	private bool canFlip;
 	
 	private Rigidbody2D rb;
 	private Animator anim;
@@ -86,7 +87,7 @@ public class Characte2DController : MonoBehaviour
 			Flip();
 		}
 		
-		if(rb.velocity.x != 0)
+		if(Mathf.Abs(rb.velocity.x) >= 0.01f)
 		{
 			isRunning = true;
 		}
@@ -127,6 +128,17 @@ public class Characte2DController : MonoBehaviour
 	private void ApplyMovement()
 	{
 		rb.velocity = new Vector2(movementSpeed * movementInputDirection, rb.velocity.y);
+	}
+	
+	public void DisableFlip()
+	{
+		canFlip = false;
+	}
+	
+	
+	public void EnableFlip()
+	{
+		canFlip = true;
 	}
 	
 	private void Flip()
