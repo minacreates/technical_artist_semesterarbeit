@@ -87,7 +87,7 @@ public class Characte2DController : MonoBehaviour
 			Flip();
 		}
 		
-		if(Mathf.Abs(rb.velocity.x) >= 0.01f)
+		if(Mathf.Abs(rb.velocity.x) >=0.01f)
 		{
 			isRunning = true;
 		}

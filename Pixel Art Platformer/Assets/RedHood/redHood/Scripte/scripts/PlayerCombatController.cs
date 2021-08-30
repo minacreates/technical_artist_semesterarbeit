@@ -74,7 +74,7 @@ public class PlayerCombatController : MonoBehaviour
    private void CheckAttackHitBox()
    {
 	   Collider2D[] detectObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamageable);
-	   foreach  (Collider2D collider in detectObjects)
+	   foreach (Collider2D collider in detectObjects)
 	   {
 		   collider.transform.parent.SendMessage("Damage", attack1Damage);
 		   //Instantiate hit particle
