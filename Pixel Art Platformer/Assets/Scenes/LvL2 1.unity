@@ -7773,6 +7773,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4370107916784771278, guid: ef3f97689065adc40b7b457f5c5c8403, type: 3}
+      propertyPath: whatIsDamageable.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 8839393924051826346, guid: ef3f97689065adc40b7b457f5c5c8403, type: 3}
       propertyPath: m_Name
       value: redHoodPrefab
